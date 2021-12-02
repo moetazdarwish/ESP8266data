@@ -1,0 +1,89 @@
+html 
+
+{
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  text-align: center;
+  }
+
+  span.temperature{
+  font-size: 24px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #240f81;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 9px rgb(11, 3, 49);
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+    color: rgb(5, 5, 5);
+    margin-bottom: 0
+  }
+
+ 
+    .paging-nav {
+        text-align: right;
+        padding-top: 2px;
+      }
+      
+      .paging-nav a {
+        margin: auto 1px;
+        text-decoration: none;
+        display: inline-block;
+        padding: 1px 7px;
+        background: #91b9e6;
+        color: white;
+        border-radius: 3px;
+      }
+      
+      .paging-nav .selected-page {
+        background: #187ed5;
+        font-weight: bold;
+      }
+      
+      .paging-nav,
+      #tableData {
+        width: 400px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+      }
+     
+      .column {
+        flex: 33.33%;
+        height: 30px;
+        padding: 10px;
+        margin: 5px;
+        
+        text-align: center;
+      }
+      .container {
+         display: flex;
+      }	
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      

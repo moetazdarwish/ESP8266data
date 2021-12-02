@@ -1,0 +1,179 @@
+<!DOCTYPE html>   
+<head>  
+    <meta charset="utf-8" />  
+    <title>VegeLogger</title>  
+    <style>
+.css-chart {
+  /* The chart borders */
+  border-bottom: 1px solid;
+  
+  border-left: 1px solid;
+  /* The height, which is initially defined in the HTML */
+  height: var(--widget-size);
+  /* A little breathing room should there be others items around the chart */
+  margin: 1em;
+  /* Remove any padding so we have as much space to work with inside the element */
+  padding: 0;
+  position: relative;
+  /* The chart width, as defined in the HTML */
+  width: var(--widget-size);
+}
+
+/* The unordered list holding the data points, no list styling and no spacing */
+.line-chart {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each point on the chart, each a 12px circle with a light border */
+.data-point {
+  background-color: rgb(0, 0, 0);
+  border-radius: 100%;
+  height: 4px;
+  position: absolute;
+  width: 4px;
+}
+.data {
+  border-radius: 100%;
+  height: 1px;
+  position: absolute;
+  width: 4px;
+}
+#my-chart.line {
+  height:500px;
+  max-width:1000px;
+  margin: 0 auto;
+}
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+figcaption {
+  background-color: black;
+  color: white;
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  padding: 20px;
+}
+.grid-item {
+  
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+    </style>
+    <script>
+        function S(VegeLogger) {
+          var pointvalue = VegeLogger.getAttribute("data-type");
+          alert(  pointvalue + ".");
+        }
+        </script>
+        <script type="text/javascript" src="./serial.js"></script>
+</head>  
+<div class="grid-container">
+  <div class="grid-item">
+      <li><a id="serial" ></a></li>
+      <li><a>Temperature display in Celsius</a></li>
+  </div>
+  <div class="grid-item">
+      <div class="column" >
+          <button class="button" onclick="window.print();return false">Print</button>
+          <button class="button" onclick="location.href = 'table.html'" >Back</button>
+      </div>
+  </div>
+  <div class="grid-item">
+      <a>VegeLogger</a>
+  </div>
+</div>
+<body>  
+    
+        <div  class="centered">
+    <figure class="css-chart" style="width: 800px; height: 400px; " >
+      <figcaption >Click on Point To Get Detail</figcaption>
+      <label for="Temperature" style="margin-left: -90px;">Temperature</label>
+     
+
+        <ul class="line-chart">
+          <li  class="data" style="bottom: 10px; left: 830px;" >Time</li>
+          <li  class="data" style="bottom: -40px; left: -30px;" >-5</li>
+          <li  class="data" style="bottom: 10px; left: -30px;" >0</li>
+          <li  class="data" style="bottom: 60px; left: -30px;" >5</li>
+          <li  class="data" style="bottom: 110px; left: -30px;" >10</li>
+          <li  class="data" style="bottom: 160px; left: -30px;" >15</li>
+          <li  class="data" style="bottom: 210px; left: -30px;" >20</li>
+          <li  class="data" style="bottom: 260px; left: -30px;" >25</li>
+          <li  class="data" style="bottom: 310px; left: -30px;" >30</li>
+          <li  class="data" style="bottom: 360px; left: -30px;" >35</li>
+          <li class='data-point'onclick='S(this)'style=bottom:248.125px; left:0.0px; data-type= 2020/1/21-10:32-24.8125C></li>
+<li class='data-point'onclick='S(this)'style=bottom:248.125px; left:0.2px; data-type= 2020/1/21-10:32-24.8125C></li>
+<li class='data-point'onclick='S(this)'style=bottom:238.125px; left:0.8px; data-type= 2020/1/21-10:32-24.8125C></li>
+<li class='data-point'onclick='S(this)'style=bottom:228.125px; left:1.6px; data-type= 2020/1/21-10:32-24.8125C></li>
+<li class='data-point'onclick='S(this)'style=bottom:218.125px; left:1.8px; data-type= 2020/1/21-10:32-24.8125C></li>
+<li class='data-point'onclick='S(this)'style=bottom:208.125px; left:2.0px; data-type= 2020/1/21-10:33-24.8125C></li>
+<li class='data-point'onclick='S(this)'style=bottom:198.125px; left:3.2px; data-type= 2020/1/21-10:33-24.8125C></li>
+<li class='data-point'onclick='S(this)'style=bottom:188.125px; left:4.4px; data-type= 2020/1/21-10:33-24.8125C></li>
+<li class='data-point'onclick='S(this)'style=bottom:178.125px; left:5.6px; data-type= 2020/1/21-10:33-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:168.125px; left:6.8px'; data-type= 2020/1/21-10:33-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:158.125px; left:7.0px'; data-type= 2020/1/21-10:33-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:148.125px; left:8.2px'; data-type= 2020/1/21-10:33-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:138.125px; left:9.4px'; data-type= 2020/1/21-10:33-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:128.125px; left:10.6px'; data-type= 2020/1/21-10:33-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:118.125px; left:11.8px'; data-type= 2020/1/21-10:33-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:108.125px; left:12.0px'; data-type= 2020/1/21-10:33-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:98.125px; left:13.2px'; data-type= 2020/1/21-10:34-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:88.125px; left:14.4px'; data-type= 2020/1/21-10:34-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:78.125px; left:15.6px'; data-type= 2020/1/21-10:34-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:68.125px; left:16.8px'; data-type= 2020/1/21-10:34-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:58.125px; left:17.0px'; data-type= 2020/1/21-10:34-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:48.125px; left:18.2px'; data-type= 2020/1/21-10:34-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:19.4px'; data-type= 2020/1/21-10:34-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:20.6px'; data-type= 2020/1/21-10:34-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.75px; left:21.8px'; data-type= 2020/1/21-10:34-24.875C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.75px; left:22.0px'; data-type= 2020/1/21-10:34-24.875C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.75px; left:23.2px'; data-type= 2020/1/21-10:34-24.875C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:24.4px'; data-type= 2020/1/21-10:34-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:25.6px'; data-type= 2020/1/21-10:35-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:26.8px'; data-type= 2020/1/21-10:35-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:27.0px'; data-type= 2020/1/21-10:35-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:28.2px'; data-type= 2020/1/21-10:35-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:29.4px'; data-type= 2020/1/21-10:35-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:30.6px'; data-type= 2020/1/21-10:35-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:31.8px'; data-type= 2020/1/21-10:35-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:32.0px'; data-type= 2020/1/21-10:35-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:33.2px'; data-type= 2020/1/21-10:35-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:34.4px'; data-type= 2020/1/21-10:35-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:35.6px'; data-type= 2020/1/21-10:35-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:36.8px'; data-type= 2020/1/21-10:35-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:37.0px'; data-type= 2020/1/21-10:36-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:38.2px'; data-type= 2020/1/21-10:36-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:39.4px'; data-type= 2020/1/21-10:36-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:40.6px'; data-type= 2020/1/21-10:36-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:41.8px'; data-type= 2020/1/21-10:36-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:42.0px'; data-type= 2020/1/21-10:36-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:43.2px'; data-type= 2020/1/21-10:36-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:44.4px'; data-type= 2020/1/21-10:36-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:45.6px'; data-type= 2020/1/21-10:36-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:46.8px'; data-type= 2020/1/21-10:36-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:47.0px'; data-type= 2020/1/21-10:36-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:48.2px'; data-type= 2020/1/21-10:37-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:49.4px'; data-type= 2020/1/21-10:37-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:50.6px'; data-type= 2020/1/21-10:37-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:51.8px'; data-type= 2020/1/21-10:37-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:52.0px'; data-type= 2020/1/21-10:37-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='b][0JFRottom:248.125px; left:53.2px'; data-type= 2020/1/21-10:37-24.8125C></li>
+<li class='data-point'onclick='S(this)'style=bottom:248.125px; left:54.4px'; data-type= 2020/1/21-10:37-24.8125C></li>
+<li class='data-point'onclick='S(this)'style='bottom:248.125px; left:150.6px'; data-type= 2020/1/21-10:37-24.8125C></li>
+
+     

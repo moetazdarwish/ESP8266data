@@ -1,0 +1,123 @@
+<style>
+ 
+#container1 {
+    columns: 7;
+    width:1200px;
+
+    margin-left: 30px;
+    column-gap: 20px;
+    grid-column: auto;
+    margin-bottom: 0px;
+}
+#container {
+    columns: 7;
+    width:1200px;
+    height:9500px;
+    border: 1px solid black;
+    margin-left: 30px;
+    column-gap: 2px;
+    grid-column: auto;
+    margin-top: 0px;
+    column-width: 120px;
+}
+h2 {
+  column-span: all;
+}
+
+table th {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 1px;
+    
+    margin-bottom: 0px;
+    color: rgb(0, 0, 0);
+    border-collapse: collapse;
+    width: 80px;
+    border-right: 1 solid;
+}
+table td{
+    border-bottom: 1px solid #ddd;
+    padding: 1px;
+    font-size: 14px;
+    text-align: center;
+    grid: 1px solid rgb(0, 0, 0) ;
+    border-collapse: collapse;
+}
+table tr{
+    width: auto;
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  padding: 20px;
+}
+.grid-item {
+  
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+h3{
+    font-size: 20px;
+    color:black;
+  }
+
+</style>
+<script type="text/javascript" src="./serial.js"></script>
+
+<div class="grid-container">
+    <div class="grid-item">
+        <li><a id="serial" ></a></li>
+        <li><a>Temperature display in Celsius</a></li>
+    </div>
+    <div class="grid-item">
+        <div class="column" >
+            <button class="button" onclick="window.print();return false">Print</button>
+            <button class="button" onclick="location.href = 'index.html'" >Back</button>
+        </div>
+    </div>
+    <div class="grid-item">
+        <a>VegeLogger</a>
+    </div>
+</div>
+
+
+<div id="container1">
+<table >
+        <tr><th>date</th><th style="width:5%;">t</th>
+        <tr><th>date</th><th>temp</th>
+        <tr><th>date</th><th>t</th>
+        <tr><th>date</th><th>t</th>
+        <tr><th>date</th><th>t</th>
+        <tr><th>date</th><th>t</th>
+        <tr><th>date</th><th>t</th>               
+        </tr>
+</table>
+</div>
+<br>
+<div id="container" >
+<table >
+    
+    <tr><td>2021/11/5-23:48</td><td>25.0</tr>
+        <tr><td>2021/11/5-23:48</td><td>25.0</tr>
+        <tr><td>2021/11/5-23:48</td><td>24.9375</tr>
+        <tr><td>2021/11/5-23:48</td><td>25.0</tr>
+        <tr><td>2021/11/5-23:48</td><td>25.0</tr>
+        <tr><td>2021/11/5-23:48</td><td>25.0</tr>
+        <tr><td>2021/11/5-23:49</td><td>25.0</tr>
+        <tr><td>2021/11/5-23:49</td><td>25.0</tr>
+        <tr><td>2021/11/5-23:49</td><td>25.0</tr>
+        <tr><td>2021/11/5-23:49</td><td>25.0</tr>
+        <tr><td>2021/11/5-23:49</td><td>25.0</tr>
+        <tr><td>2021/11/5-23:49</td><td>25.0</tr>
+        <tr><td>2021/11/5-23:49</td><td>25.0</tr>
+        <tr><td>2021/11/5-23:49</td><td>25.0</tr>
+        <tr><td>2021/11/5-23:49</td><td>26.25</tr>
+        <tr><td>2021/11/5-23:49</td><td>27.4375</tr>
+        <tr><td>2021/11/5-23:49</td><td>27.9375</tr>
